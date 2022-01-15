@@ -15,7 +15,8 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   rules: {
     quotes: ['error', 'single'], // 싱글 쿼터 사용
-    '@typescript-eslint/quotes': ['error', 'single'], // 더블 쿼터 사용
+    'jsx-quotes': ['error', 'prefer-single'],
+    '@typescript-eslint/quotes': ['error', 'single'], // 싱글 쿼터 사용
     'no-unused-vars': 'off', // 사용안한 변수 경고 중복
     'spaced-comment': 'off', // 주석을 뒤에 쓰지 말라는 경고
     '@typescript-eslint/no-unused-vars': 'warn', // 사용안한 변수는 경고
