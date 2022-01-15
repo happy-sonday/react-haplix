@@ -39,6 +39,22 @@ module.exports = {
     'import/prefer-default-export': 'off', // export default 권장
     'no-param-reassign': 'off', // param assign 하지 않기
     'jsx-a11y/label-has-associated-control': 'off',
+    'react/function-component-definition': [
+      // 화살표 함수 사용
+      2,
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
+    'react/self-closing-comp': [
+      'error',
+      {
+        component: true,
+        html: true,
+      },
+    ],
+    'linebreak-style': 0,
     'no-invalid-css': 'off',
     'no-confusing-arrow': 'off',
     'react/jsx-curly-newline': 'off',
