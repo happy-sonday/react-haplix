@@ -7,6 +7,7 @@ export const Inner = styled.div`
   max-width: 1100px;
   margin: auto;
   width: 100%;
+
   flex-direction: ${({ direction }) => direction};
 
   @media (max-width: 1000px) {
@@ -15,6 +16,12 @@ export const Inner = styled.div`
 `;
 
 export const Item = styled.div`
+  @media (min-width: 1001px) {
+    &:nth-child(even) ${Inner} {
+      flex-direction: row-reverse;
+    }
+  }
+
   display: flex;
   border-bottom: 8px solid #222;
   padding: 50px 5%;

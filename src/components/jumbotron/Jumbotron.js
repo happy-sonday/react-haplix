@@ -3,6 +3,7 @@ import {
   Container,
   Image,
   Inner,
+  Item,
   Pane,
   SubTitle,
   Title,
@@ -10,7 +11,11 @@ import {
 
 const Jumbotron = ({ children, direction = 'row', ...restProps }) => {
   //console.log(children);
-  return <Inner direction={direction}>{children}</Inner>;
+  return (
+    <Item {...restProps}>
+      <Inner direction={direction}>{children}</Inner>
+    </Item>
+  );
 };
 
 // NOTE: 점표기법 Dot notation
