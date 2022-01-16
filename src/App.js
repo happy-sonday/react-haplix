@@ -2,6 +2,8 @@ import React from 'react';
 import Footer from './components/footer/footer';
 import Jumbotron from './components/jumbotron/Jumbotron';
 import jumboData from './fixtures/jumbo.json';
+import faqData from './fixtures/faqs.json';
+import Accordion from './components/accordion/accordion';
 
 // const App:React.FC<Props> = () => {
 //   //return <> 왜?</>;
@@ -26,6 +28,18 @@ const App = () => {
           );
         })}
       </Jumbotron.Container>
+
+      <Accordion>
+        <Accordion.Title>Frequently Asked Questions</Accordion.Title>
+        <Accordion.Frame>
+          {faqData.map((item) => (
+            <Accordion.Item key={item.id}>
+              <Accordion.Header>{item.header}</Accordion.Header>
+              <Accordion.Body>{item.body}</Accordion.Body>
+            </Accordion.Item>
+          ))}
+        </Accordion.Frame>
+      </Accordion>
 
       <Footer>
         <Footer.Title>질문이 있으신가요? 문의전화 010-9655-8120</Footer.Title>
