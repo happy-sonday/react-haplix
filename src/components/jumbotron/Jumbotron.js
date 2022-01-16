@@ -7,7 +7,7 @@ import {
   Pane,
   SubTitle,
   Title,
-} from '../styles/jumbotron';
+} from './styles/jumbotron';
 
 const Jumbotron = ({ children, direction = 'row', ...restProps }) => {
   //console.log(children);
